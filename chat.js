@@ -17,19 +17,20 @@ async function sendMessage() {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
-        }, //Body contains all the requirements
+        }, 
+        //Body contains all the requirements
         body: JSON.stringify({ messageId: msgContainer.children.length + 1, sender: sender, receiver: receiver, message: chatMessage.value })
     });
 
 
-    chatMessage.value = ''
+    chatMessage.value = '' //Clear the input field after sending
 }
 
 function emptyMessageSent() {
-    alertBox.style.display = 'block'
+    alertBox.style.display = 'block' //Notify User
     alertBox.textContent = 'Cannot Send Empty Message'
 
-    setTimeout(() => {
+    setTimeout(() => { //Clear after 2 seconds
         alertBox.textContent = ''
         alertBox.style.display = 'none'
     }, 2000)
@@ -44,7 +45,7 @@ function newMessages() {
 
 
 async function loadMessages() {
-    const response = await fetch(`${apiURL}/messages`, {
+    const response = await fetch(`${apiURL}/messages`, { //Retreiving messages of a specific sender and receiver
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
@@ -69,8 +70,6 @@ async function loadMessages() {
         msgContainer.innerHTML += messageContent
     })
 
-    msgContainer.scrollTop = msgContainer.scrollHeight;
-
 }
 
 sendMessageButton.addEventListener('click', sendMessage);
@@ -79,4 +78,9 @@ chatMessage.addEventListener('keydown', () => {
         sendMessage()
     }
 })
-setInterval(loadMessages, 550)// Message loading speed lower is faster
+// setInterval(loadMessages, 3500)// Message loading speed lower is faster
+
+window.onload = ()=>{
+    loadMessages()//To be removed later
+    msgContainer.scrollTop = msgContainer.scrollHeight;
+}

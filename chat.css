@@ -53,6 +53,9 @@ h1 {
     text-align: center;
 }
 
+.chat h2 span{
+    font-family:'Georgia'
+}
 .input_msg {
     display: flex;
     justify-content: space-between;
