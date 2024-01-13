@@ -13,11 +13,11 @@ async function sendMessage() {
         emptyMessageSent()
         return;
     }
-    const response = await fetch(`${apiURL}/send`, {
+    const response = await fetch(`${apiURL}/send`, {  //Sending a reqest to /send endpoint in backend with all requirements
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
-        },
+        }, //Body contains all the requirements
         body: JSON.stringify({ messageId: msgContainer.children.length + 1, sender: sender, receiver: receiver, message: chatMessage.value })
     });
 
@@ -69,7 +69,7 @@ async function loadMessages() {
         msgContainer.innerHTML += messageContent
     })
 
-
+    msgContainer.scrollTop = msgContainer.scrollHeight;
 
 }
 
