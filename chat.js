@@ -79,4 +79,4 @@ chatMessage.addEventListener('keydown', () => {
         sendMessage()
     }
 })
-setInterval(loadMessages, 250)
+setInterval(loadMessages, 550)// Message loading speed lower is faster
