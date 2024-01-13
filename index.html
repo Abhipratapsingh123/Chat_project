@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatRoom</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+
+<body>
+    <h1>ChatRoom</h1>
+    <div class="chat">
+        <h2>Welcome to <span>User</span></h2>
+        <div id="alertBox"></div>
+        <div class="msgContainer">
+            <div>
+                <span>User:</span>
+                random message is here
+            </div>
+            <div>
+                <span>User:</span>
+                random message is here
+            </div>
+            <div>
+                <span>User:</span>
+                random message is here
+            </div>
+            <div class="sender">
+                <span>User:</span>
+                random message is here
+            </div>
+            <div class="sender">
+                <span>User:</span>
+                random message is here
+            </div>
+            <div class="sender">
+                <span>User:</span>
+                random message is here
+            </div>
+            <div>
+                <span>User:</span>
+                random message is here
+            </div>
+        </div>
+        <div class="input_msg" >
+            <input type="text" placeholder="Write message here" id="chatMessage">
+            <button id="sendMessageButton"><img src="./assets/send.svg" alt="Error"></button>
+        </div>
+        <button onclick="loadMessages()">Load</button>
+    </div>
+    <script src="./chat.js"></script>
+</body>
+
+</html>
