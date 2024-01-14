@@ -3,7 +3,7 @@ const chatMessage = document.getElementById('chatMessage')
 const msgContainer = document.getElementsByClassName('msgContainer')[0]
 const alertBox = document.getElementById('alertBox')
 const apiURL = 'https://947d3923-78bd-4d3e-8961-7595662f8ab1-00-2oa1p6mpkxim5.picard.replit.dev'
-const sender = 'abhi'
+const sender = JSON.parse(localStorage.getItem("loginDetails")).name;
 const receiver = 'chirag'
 
 
@@ -45,6 +45,7 @@ function newMessages() {
 
 
 async function loadMessages() {
+    console.log('I was called');
     const response = await fetch(`${apiURL}/messages`, { //Retreiving messages of a specific sender and receiver
         method: "POST",
         headers: {
@@ -72,6 +73,11 @@ async function loadMessages() {
 
 }
 
+function logout(){
+    localStorage.removeItem("loginDetails")
+    location.reload()
+}
+
 sendMessageButton.addEventListener('click', sendMessage);
 chatMessage.addEventListener('keydown', () => {
     if (event.key === 'Enter') {
@@ -80,7 +86,8 @@ chatMessage.addEventListener('keydown', () => {
 })
 // setInterval(loadMessages, 3500)// Message loading speed lower is faster
 
-window.onload = ()=>{
-    loadMessages()//To be removed later
+setTimeout( ()=>{
+    console.log("I am working");
+    setTimeout(loadMessages,2000)
     msgContainer.scrollTop = msgContainer.scrollHeight;
-}
+},1000);
