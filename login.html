@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./login.css">
 </head>
 <body>
-    <label for="usernameInput">Enter Username</label>
-    <input id ="usernameInput" type="text" placeholder="Username">
-    <label for="passwordInput">Enter Password</label>
-    <input id ="passwordInput" type="text" placeholder="Password">
-    <button id="loginButton">Log In</button>
+    <div id="loginFormContainer">
+        <h1>Login Page</h1>
 
-    <a href="./signup.html"> Signup instead</a>
-    <script src="./login.js"></script>
+        <div class="inputContainers">
+            <label for="usernameInput">Enter Username</label>
+            <input id ="usernameInput" type="text" placeholder="Username">
+        </div>
+        <div class="inputContainers">
+            <label for="passwordInput">Enter Password</label>
+            <input id ="passwordInput" type="text" placeholder="Password">
+        </div>
+        <button id="loginButton">Log In</button>
+    
+        <a href="./signup.html"> Signup instead</a>
+        <script src="./login.js"></script>
+    </div>
+   
 </body>
 </html>
