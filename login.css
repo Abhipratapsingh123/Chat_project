@@ -64,6 +64,9 @@ input:hover {
     font-weight: bold;
 }
 
+button:hover{
+    cursor:pointer;
+}
 div a {
     background-color: rgb(211, 227, 240);
     text-decoration: none;
