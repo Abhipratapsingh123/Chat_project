@@ -9,7 +9,8 @@ body {
     display: grid;
     place-content: center;
     min-height: 100vh;
-    background-color: #171747;
+    background-color: rgb(145, 212, 145);
+
 }
 
 h1 {
@@ -17,7 +18,7 @@ h1 {
     font-family: cursive;
     text-align: center;
     font-size: 3rem;
-    ;
+
 
 }
 
@@ -43,8 +44,9 @@ h1 {
 
 }
 
-.msgContainer div{
+.msgContainer div {
     box-shadow: 2px 2px rgb(46, 42, 42);
+
 }
 
 .chat h2 {
@@ -53,9 +55,10 @@ h1 {
     text-align: center;
 }
 
-.chat h2 span{
-    font-family:'Georgia'
+.chat h2 span {
+    font-family: 'Georgia'
 }
+
 .input_msg {
     display: flex;
     justify-content: space-between;
@@ -117,4 +120,15 @@ h1 {
     display: none;
     color: red;
     font-weight: bold;
+}
+
+#Logoutbutton {
+    font-weight: bold;
+    width: 12rem;
+    align-self: center;
+    cursor: pointer;
+    margin-top: 1rem;
+    border-radius: 5px;
+    padding: 0.3rem;
+
 }

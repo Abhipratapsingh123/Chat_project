@@ -9,7 +9,7 @@ h1 {
     font-size: 2rem;
     align-self: center;
     border-radius: 10px;
-    background-color: white;
+    background-color: aliceblue;
     padding: 5px 10px;
 }
 
@@ -25,9 +25,9 @@ body {
 
 #loginFormContainer {
     background-color: aliceblue;
-    padding: 20px;
+    padding: 0.8rem;
     border-radius: 20px;
-    margin-top: 1rem;
+    margin-top: 0.1rem;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -49,26 +49,30 @@ input {
     border-radius: 6px;
     background-color: white;
     padding: 5px 10px;
+    border: 2px solid black;
 }
 
 input:hover {
     background-color: rgb(240, 240, 240);
 }
 
-#loginButton,#signUpButton {
+#loginButton,
+#signUpButton {
     border-radius: 10px;
     padding: 5px 0px;
     background-color: white;
     margin-top: 1rem;
     font-size: 1.5rem;
     font-weight: bold;
+    border: 2px solid black
 }
 
-button:hover{
-    cursor:pointer;
+button:hover {
+    cursor: pointer;
 }
+
 div a {
-    background-color: rgb(211, 227, 240);
+    background-color: aliceblue;
     text-decoration: none;
     width: fit-content;
     padding: 5px 10px;
@@ -83,5 +87,9 @@ div a {
 }
 
 div a:hover {
+    background-color: rgb(211, 227, 240);
+}
+
+#loginButton:hover {
     background-color: aliceblue;
 }
